@@ -27,6 +27,8 @@ body{
     font-weight: 400;
     color: #fff;
     background-color: #131313;
+    min-width: 320px;
+    overflow-x: hidden;
 }
 
 .container {
@@ -64,6 +66,10 @@ body{
 .menu__btn{
     font-size: 32px;
     cursor: pointer;
+    a{
+        color: #fff;
+    }
+    
 }
 
 .header__item-inner{
@@ -116,12 +122,14 @@ body{
     font-family: $jura;
     font-size: 36px;
     line-height: 43px;
-    color: #fff;
     border-top-left-radius: 100px;
     border-top-right-radius: 100px;
     border: 2px solid #FFFFFF;
     box-shadow: 0px 5px 25px rgba(255, 255, 255, 0.48);
     cursor: pointer;
+    a{
+        color: #fff;
+    }
 }
 
 // --------- about ----------
@@ -147,19 +155,23 @@ body{
     }
 }
 
+// --------------title---------------
+
+.title{
+    font-size: 72px;
+    line-height: 79px;
+    text-align: center;
+}
+
+// ------------advantage-------------
+
 .advantage__wrapper{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: 90px;
 }
 .advantage{
-    padding-bottom: 130px;
-    &__title{
-        font-size: 72px;
-        line-height: 79px;
-        text-align: center;
-        padding-bottom: 115px;
-    }
     &__item{
         width: 473px;
         height: 335px;
@@ -205,12 +217,12 @@ body{
     }
 }
 
+
+
+// --------------programs---------------
+
 .programs{
-    &__title{
-        font-size: 72px;
-        line-height: 79px;
-        text-align: center;
-    }
+    margin-top: 130px;
     &__wrapper{
         display: flex;
         justify-content: space-evenly;
@@ -266,12 +278,16 @@ body{
 
 // --------gallery----------
 
-.gallery__title{
-    margin-top: 200px;
-    text-align: center;
-    font-size: 72px;
-    line-height: 79px;
-    margin-bottom: 60px;
+.gallery{
+    margin-top: 208px;
+    .slick-track {
+        position: relative;
+        top: 60px;
+    }
+}
+
+.gallery__slider{
+    margin-top: 60px;
 }
 
 .gallery__slider-item{
@@ -287,8 +303,7 @@ body{
     padding-right: 36px;
     &-left{
         font-size: 36px;
-        line-height: 36px;
-        
+        line-height: 36px;   
     }
     &-number{
         font-size: 32px;
@@ -313,11 +328,6 @@ body{
     position: absolute;
 }
 
-.slick-track {
-    position: relative;
-    top: 60px;
-}
-
 .slick-active {
     .gallery__slider-title{
         display: flex;
@@ -334,7 +344,6 @@ body{
         }
     }
 }
-
 
 .gallery__slider{
     position: relative;
@@ -374,24 +383,15 @@ body{
     }
 }
 
-
-
-
-
-
 // ------------certificates--------------
+
 .certificates{
-    margin-top: 130px;
+    margin-top: 200px;
     margin-bottom: 125px;
-    &__title{
-        font-size: 75px;
-        line-height: 83px;
-        text-align: center;
-        margin-bottom: 75px;
-    }
     &__wrapper{
         display: flex;
         align-items: center;
+        margin-top: 75px;
         img{
             margin-left: 238px;
         }
@@ -471,20 +471,23 @@ body{
     margin-left: 80px;
 }
 
-
 .form__wrap{
     position: absolute;
     z-index: 2;
+}
+
+.form__select{
+    margin-left: 30px;
 }
 
 .form__item{
     position: absolute;
     z-index: 1;
     top: 430px;
-    .form__select,
-    .form__select2{
-        margin-left: 71px;
-    }
+}
+
+.form__select-2{
+    margin-left: 71px;
 }
 
 .form__paragraph{
@@ -494,11 +497,10 @@ body{
 }
 
 .form__select,
-.form__select2{
+.form__select-2{
     width: 375px;
-    margin-left: 30px;
     .default__option,
-    .default__option2{
+    .default__option-2{
         border: 3px solid #fff;
         position: relative;
         border-radius: 10px;
@@ -522,54 +524,47 @@ body{
             transition: all 0.8s; 
         }
     }
-    .select__ul,
-    .select2__ul{
-        border-radius: 5px;
-        background: grey;
-        cursor: pointer;
-        border: 3px solid #fff;
-        border-radius: 10px;
-        display: none;
-        li{
-            padding: 20px 40px;
-            font-size: 32px;
-            line-height: 38px;
-            &:hover{
-                background: #414b57;
-                transition: all 0.4s; 
-            }
+}
+
+.select__ul,
+.select__ul-2{
+    border-radius: 5px;
+    background: grey;
+    cursor: pointer;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    display: none;
+    li{
+        padding: 20px 40px;
+        font-size: 32px;
+        line-height: 38px;
+        &:hover{
+            background: #414b57;
+            transition: all 0.4s; 
         }
-        li + li{
-            border-top: 2px solid #111;
-        }
-        li:first-child{
-            border-top-left-radius: 6px;
-            border-top-right-radius: 6px;
-        }
-        li:last-child{
-            border-bottom-left-radius: 6px;
-            border-bottom-right-radius: 6px;
-        }
+    }
+    li + li{
+        border-top: 2px solid #111;
+    }
+    li:first-child{
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+    li:last-child{
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
     }
 }
 
 .form__select.active .select__ul,
-.form__select2.active .select2__ul{
+.form__select-2.active .select__ul-2{
     display: block;
     z-index: 100;
 }
 
-.form__select.active .default__option:after{
-    transform: rotate(-180deg);
-    top: 25%;
-}
-
-.form__select2.active .default__option2:after{
-    transform: rotate(-180deg);
-    top: 25%;
-}
-
-.form__select3.active .default__option3:after{
+.form__select.active .default__option:after,
+.form__select-2.active .default__option-2:after,
+.form__select-3.active .default__option-3:after{
     transform: rotate(-180deg);
     top: 25%;
 }
@@ -587,9 +582,6 @@ body{
     } 
 }
 
-
-
-
 .quantity {
     display: inline-block;
     margin-left: 25px;
@@ -602,12 +594,11 @@ input[type=number]::-webkit-outer-spin-button{
     margin: 0;
 }
   
-  input[type=number]
-  {
+input[type=number]{
     -moz-appearance: textfield;
-  }
+}
   
-  .quantity input {
+.quantity input {
     width: 200px;
     height: 100px;
     line-height: 1.65;
@@ -619,63 +610,48 @@ input[type=number]::-webkit-outer-spin-button{
     line-height: 57px;
     font-family: $jura;
     color: #fff;
-  }
+}
   
-  .quantity input:focus {
+.quantity input:focus {
     outline: 0;
-  }
+}
   
-  .quantity-nav {
+.quantity-nav {
     float: left;
-    // position: static;
     height: 42px;
-  }
+}
   
-  .quantity-button {
+.quantity-button {
     position: relative;
     cursor: pointer;
-    border-left: 1px solid #eee;
     width: 20px;
-    text-align: center;
-    color: #333;
     font-size: 13px;
-    font-family: "Trebuchet MS", Helvetica, sans-serif !important;
     line-height: 1.7;
-    -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-  }
-  
-  .quantity-button.quantity-up {
-    position: absolute;
-    top: 36px;
-    right: 10px;
-    border-bottom: none;
-    border-left: none;
-  }
-  
-  .quantity-button.quantity-down {
-    position: absolute;
-    top: 37px;
-    right: 135px;
-    border-bottom: none;
-    border-left: none;
-  }
+    &.quantity-up {
+        position: absolute;
+        top: 36px;
+        right: 10px;
+        border-bottom: none;
+        border-left: none;
+    }
+    &.quantity-down {
+        position: absolute;
+        top: 37px;
+        right: 135px;
+        border-bottom: none;
+        border-left: none;
+    }
+}
 
-  .times__item-inner{
-      margin-left: 60px;
-  }
+.times__item-inner{
+    margin-left: 60px;
+}
 
-
-
-.form__select3{
+.form__select-3{
     width: 247px;
     margin-left: 30px;
-    .default__option3{
+    .default__option-3{
         border: 3px solid #fff;
         position: relative;
         border-radius: 10px;
@@ -699,7 +675,7 @@ input[type=number]::-webkit-outer-spin-button{
             transition: all 0.8s; 
         }
     }
-    .select3__ul{
+    .select__ul-3{
         border-radius: 5px;
         background: grey;
         cursor: pointer;
@@ -729,11 +705,10 @@ input[type=number]::-webkit-outer-spin-button{
     }
 }
 
-.form__select3.active .select3__ul{
+.form__select-3.active .select__ul-3{
     display: block;
     z-index: 100;
 }
-
 
 .form__box{
     margin-left: 80px;
@@ -753,8 +728,7 @@ input[type=number]::-webkit-outer-spin-button{
         padding-left: 40px;
         padding-right: 40px;
         color: #fff;
-    }
-    
+    }  
 }
 
 .form__box-name{
@@ -786,7 +760,7 @@ input[type=number]::-webkit-outer-spin-button{
     }
 }
 
-// -------------subscription---------------
+// -------------subscrip---------------
 
 .subscrip{
     max-width: 1596px;
@@ -843,25 +817,22 @@ input[type=number]::-webkit-outer-spin-button{
         margin-top: 85px;
         margin-bottom: 70px;
     }
-}
-
-.sub-form__wrapper{
-    display: flex;
-    margin-left: 80px;
-    position: absolute;
-    // top: 234px;
-    z-index: 2;
-}
-
-.sub-form__wrapper-inner,
-.sub-form__wrapper-amount{
-    display: flex;
-}
-
-.sub-form__wrapper-title{
-    font-size: 36px;
-    line-height: 40px;
-    padding-top: 30px;
+    &__wrapper{
+        display: flex;
+        margin-left: 80px;
+        position: absolute;
+        // top: 234px;
+        z-index: 2;
+    }
+    &__inner,
+    &__wrap{
+        display: flex;
+    }
+    &__paragraph{
+        font-size: 36px;
+        line-height: 40px;
+        padding-top: 30px;
+    }
 }
 
 .sub-form__select{
@@ -931,20 +902,17 @@ input[type=number]::-webkit-outer-spin-button{
     top: 25%;
 }
 
-
-
-.sub-form__wrapper-title2{
+.sub-form__paragraph-2{
     font-size: 36px;
     line-height: 40px;
     padding-top: 30px;
     margin-left: 125px;
 }
 
-
-.sub-form__select2{
+.sub-form__select-2{
     width: 317px;
     margin-left: 30px;
-    .sub-form__default-option2{
+    .sub-form__default-option-2{
         border: 3px solid #fff;
         position: relative;
         border-radius: 10px;
@@ -968,7 +936,7 @@ input[type=number]::-webkit-outer-spin-button{
             transition: all 0.8s; 
         }
     }
-    .sub-form__select-ul2{
+    .sub-form__select-ul-2{
         border-radius: 5px;
         background: grey;
         cursor: pointer;
@@ -998,12 +966,12 @@ input[type=number]::-webkit-outer-spin-button{
     }
 }
 
-.sub-form__select2.active .sub-form__select-ul2{
+.sub-form__select-2.active .sub-form__select-ul-2{
     display: block;
     z-index: 100;
 }
 
-.sub-form__select2.active .sub-form__default-option2:after{
+.sub-form__select-2.active .sub-form__default-option-2:after{
     transform: rotate(-180deg);
     top: 25%;
 }
@@ -1038,7 +1006,6 @@ input[type=number]::-webkit-outer-spin-button{
     padding-top: 30px;
     text-transform: uppercase;
 }
-
 
 .sub-form__box-phone{
     display: flex;
@@ -1079,6 +1046,8 @@ input[type=number]::-webkit-outer-spin-button{
         box-shadow: 0px 5px 25px rgba(255, 255, 255, 0.48);
         border-radius: 10px;
         cursor: pointer;
+        outline: none;
+        border: none;
     }
 }
 
@@ -1098,20 +1067,14 @@ input[type=number]::-webkit-outer-spin-button{
     bottom: 75px;
 }
 
-
 // -----------reviews------------
 
 .reviews{
     background-color: grey;
     padding-top: 100px;
     padding-bottom: 150px;
-    &__title{
-        font-size: 72px;
-        line-height: 79px;
-        text-align: center;
-    }
     &__item{
-        margin-bottom: 50px;
+        padding-top: 75px;
         width: 1326px;
         margin: 0 auto;
         p{
@@ -1127,10 +1090,8 @@ input[type=number]::-webkit-outer-spin-button{
     font-size: 36px;
     line-height: 40px;
     width: 415px;
-    margin-bottom: 15px;
+    padding-bottom: 15px;
 }
-
-
 
 .reviews__slider-item{
     width: 1326px;
@@ -1140,7 +1101,7 @@ input[type=number]::-webkit-outer-spin-button{
     box-shadow: 0px 7px 31px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     margin: 0 auto;
-    margin-top: 50px;
+    // margin-top: 50px;
     .reviews__slider-text{
         color: #000;
         font-family: $jura;
@@ -1160,6 +1121,7 @@ input[type=number]::-webkit-outer-spin-button{
 
 .reviews__slider{
     position: relative;
+    margin-top: 50px;
     .slick-list {
         overflow: visible;
     }
@@ -1167,7 +1129,7 @@ input[type=number]::-webkit-outer-spin-button{
         background: #fff;
         position: absolute;
         left: -140px;
-        top: 65%;
+        top: 50%;
         transform: translateY(-50%);
         width: 85px;
         height: 85px;
@@ -1190,7 +1152,7 @@ input[type=number]::-webkit-outer-spin-button{
         background: #fff;
         position: absolute;
         right: -140px;
-        top: 65%;
+        top: 50%;
         transform: translateY(-50%);
         width: 85px;
         height: 85px;
@@ -1234,6 +1196,8 @@ input[type=number]::-webkit-outer-spin-button{
         }
     }
 }
+
+// -----------footer-------------
 
 .footer{
     padding-top: 105px;
@@ -1307,5 +1271,141 @@ input[type=number]::-webkit-outer-spin-button{
         }
     }
 }
+
+// -----------popup-----------
+
+.popup{
+    display: flex;
+    position: absolute;
+    z-index: 20;
+    left: -100%;
+    top: 0;
+}
+
+.menu__btn-active .popup{
+    left: 0;
+}
+
+.popup__wrapper{
+    width: 750px;
+    background-color: rgb(37, 35, 39);
+    // background-color: #131313;
+    padding-top: 120px;
+    padding-left: 154px;
+    height: 100vh;
+}
+
+.popup__item{
+    max-width: 445px;
+    width: 100%;
+    .menu{
+        margin-top: 60px;
+        ul{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 315px;
+            li{
+                margin-bottom: 35px;
+                width: 290px;
+            }
+            a{
+                color: #fff;
+                font-size: 24px;
+                line-height: 28px;
+                font-family: $jura;
+                padding-bottom: 3px;
+                &:hover{
+                    border-bottom: 2px solid #fff;
+                    
+                }
+            }
+        } 
+    }
+    .popup__time{
+        font-size: 24px;
+        line-height: 28px;
+        font-family: $jura;
+        margin-top: 290px;
+    }
+}
+
+.popup__btn{
+    display: flex;
+}
+
+.popup__close,
+.popup__instagram,
+.popup__vk{
+    width: 85px;
+    height: 85px;
+    background-color: grey;
+    display: block;
+    cursor: pointer;
+    // &:hover{
+    //     background-color: #fff;
+    // }
+}
+
+.popup__close,
+.popup__instagram,
+.popup__vk{
+    position: relative;
+    transition: all 0.5s;
+    &:before{
+        position: absolute;
+        font-family: "icomoon";
+        content: "\f00d";
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-size: 38px;
+        transition: all 0.5s;
+    }
+}
+
+.popup__instagram{
+    &:before{
+        content: "\f16d";
+    } 
+}
+
+.popup__vk{
+    &:before{
+        content: "\f189";
+    }
+}
+
+.popup__close:hover,
+.popup__instagram:hover,
+.popup__vk:hover{
+    transition: all 0.5s;
+    background-color: #fff;
+    &:before{
+        color: #000;
+        transition: all 0.5s;
+    }
+}
+
+.popup__overlay{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+}
+
+.menu__btn-active .popup__overlay{
+    display: block;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+
 
 
