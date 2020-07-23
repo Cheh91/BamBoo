@@ -1,5 +1,12 @@
 $(function () {
 
+    $(".btn__down").click(function(){
+        $("html, body").animate({scrollTop:$(document).height()}, 2000);
+
+        return false;
+    });
+
+
     $('.gallery__slider').slick({
         // dots: true,
         infinite: true,
@@ -27,25 +34,25 @@ $(function () {
 
 
 
-    $(".default__option2").click(function () {
+    $(".default__option-2").click(function () {
         $(this).parent().toggleClass("active");
     });
 
-    $(".select2__ul li").click(function () {
+    $(".select__ul-2 li").click(function () {
         let currentele = $(this).html();
-        $(".default__option2 li").html(currentele);
-        $(this).parents(".form__select2").removeClass("active");
+        $(".default__option-2 li").html(currentele);
+        $(this).parents(".form__select-2").removeClass("active");
     });
 
 
-    $(".default__option3").click(function () {
+    $(".default__option-3").click(function () {
         $(this).parent().toggleClass("active");
     });
 
-    $(".select3__ul li").click(function () {
+    $(".select__ul-3 li").click(function () {
         let currentele = $(this).html();
-        $(".default__option3 li").html(currentele);
-        $(this).parents(".form__select3").removeClass("active");
+        $(".default__option-3 li").html(currentele);
+        $(this).parents(".form__select-3").removeClass("active");
     });
 
 
@@ -61,14 +68,14 @@ $(function () {
     });
 
 
-    $(".sub-form__default-option2").click(function () {
+    $(".sub-form__default-option-2").click(function () {
         $(this).parent().toggleClass("active");
     });
 
-    $(".sub-form__select-ul2 li").click(function () {
+    $(".sub-form__select-ul-2 li").click(function () {
         let currentele = $(this).html();
-        $(".sub-form__default-option2 li").html(currentele);
-        $(this).parents(".sub-form__select2").removeClass("active");
+        $(".sub-form__default-option-2 li").html(currentele);
+        $(this).parents(".sub-form__select-2").removeClass("active");
     });
 
 
@@ -114,6 +121,51 @@ $(function () {
         cssEase: 'linear',
         prevArrow: '<button type="button" class="slick-btn slick-prev"></button>',
         nextArrow: '<button type="button" class="slick-btn slick-next"></button>',
-      });
+    });
 
+
+   
+    // $('.popup-modal').magnificPopup({
+    //     type: 'inline',
+    //     preloader: false,
+    //     focus: '#username',
+    //     modal: true,
+    //     closeOnContentClick: true,
+    // });
+    // $(document).on('click', '.popup__close', function (e) {
+    //     e.preventDefault();
+    //     $.magnificPopup.close();
+    // });
+
+
+    function popupMenu(selector){
+        let menu = $(selector);
+        let button = menu.find(".burger-menu");
+        let links = menu.find(".menu__link");
+        let overlay = menu.find(".popup__overlay");
+        let close = menu.find(".popup__close");
+
+        button.on("click", (e) => {
+            e.preventDefault()
+            toggleMenu()
+        })
+
+        links.on("click", () => toggleMenu());
+        overlay.on("click", () => toggleMenu());
+        close.on("click", () => toggleMenu());
+
+        function toggleMenu(){
+            menu.toggleClass("menu__btn-active");
+
+            // if(menu.hasClass("menu__btn-active")){
+            //     $("body").css("overflow", "hidden");
+            // } else {
+            //     $("body").css("overflow", "visible");
+            // }
+        }
+        
+    }
+
+    popupMenu(".menu__btn")
+    
 })
