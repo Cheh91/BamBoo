@@ -14,8 +14,7 @@ $(function () {
     });
 
 
-
-
+    
     $(".default__option").click(function () {
         $(this).parent().toggleClass("active");
     });
