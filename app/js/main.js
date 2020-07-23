@@ -1,5 +1,28 @@
 $(function () {
 
+    function popupMenu(selector){
+        let menu = $(selector);
+        let button = menu.find(".burger-menu");
+        let links = menu.find(".menu__link");
+        let overlay = menu.find(".popup__overlay");
+        let close = menu.find(".popup__close");
+
+        button.on("click", (e) => {
+            e.preventDefault()
+            toggleMenu()
+        })
+
+        links.on("click", () => toggleMenu());
+        overlay.on("click", () => toggleMenu());
+        close.on("click", () => toggleMenu());
+
+        function toggleMenu(){
+            menu.toggleClass("menu__btn-active");
+        }
+    }
+
+    popupMenu(".menu__btn")
+
     $(".btn__down").click(function(){
         $("html, body").animate({scrollTop:$(document).height()}, 2000);
 
@@ -124,48 +147,4 @@ $(function () {
     });
 
 
-   
-    // $('.popup-modal').magnificPopup({
-    //     type: 'inline',
-    //     preloader: false,
-    //     focus: '#username',
-    //     modal: true,
-    //     closeOnContentClick: true,
-    // });
-    // $(document).on('click', '.popup__close', function (e) {
-    //     e.preventDefault();
-    //     $.magnificPopup.close();
-    // });
-
-
-    function popupMenu(selector){
-        let menu = $(selector);
-        let button = menu.find(".burger-menu");
-        let links = menu.find(".menu__link");
-        let overlay = menu.find(".popup__overlay");
-        let close = menu.find(".popup__close");
-
-        button.on("click", (e) => {
-            e.preventDefault()
-            toggleMenu()
-        })
-
-        links.on("click", () => toggleMenu());
-        overlay.on("click", () => toggleMenu());
-        close.on("click", () => toggleMenu());
-
-        function toggleMenu(){
-            menu.toggleClass("menu__btn-active");
-
-            // if(menu.hasClass("menu__btn-active")){
-            //     $("body").css("overflow", "hidden");
-            // } else {
-            //     $("body").css("overflow", "visible");
-            // }
-        }
-        
-    }
-
-    popupMenu(".menu__btn")
-    
 })

@@ -132,6 +132,138 @@ body{
     }
 }
 
+// -----------popup-----------
+
+.popup{
+    display: flex;
+    position: absolute;
+    z-index: 20;
+    left: -100%;
+    top: 0;
+    transition: all 1s;
+}
+
+.menu__btn-active .popup{
+    left: 0;
+    transition: all 1s;
+}
+
+.popup__wrapper{
+    width: 750px;
+    background-color: rgb(37, 35, 39);
+    // background-color: #131313;
+    padding-top: 120px;
+    padding-left: 154px;
+    height: 100vh;
+}
+
+.popup__item{
+    max-width: 445px;
+    width: 100%;
+    .menu{
+        margin-top: 60px;
+        ul{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 315px;
+            li{
+                margin-bottom: 35px;
+                width: 290px;
+            }
+            a{
+                color: #fff;
+                font-size: 24px;
+                line-height: 28px;
+                font-family: $jura;
+                padding-bottom: 3px;
+                &:hover{
+                    border-bottom: 2px solid #fff;
+                    
+                }
+            }
+        } 
+    }
+    .popup__time{
+        font-size: 24px;
+        line-height: 28px;
+        font-family: $jura;
+        margin-top: 290px;
+    }
+}
+
+.popup__btn{
+    display: flex;
+}
+
+.popup__close,
+.popup__instagram,
+.popup__vk{
+    width: 85px;
+    height: 85px;
+    background-color: grey;
+    display: block;
+    cursor: pointer;
+}
+
+.popup__close,
+.popup__instagram,
+.popup__vk{
+    position: relative;
+    transition: all 0.5s;
+    &:before{
+        position: absolute;
+        font-family: "icomoon";
+        content: "\f00d";
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-size: 38px;
+        transition: all 0.5s;
+    }
+}
+
+.popup__instagram{
+    &:before{
+        content: "\f16d";
+    } 
+}
+
+.popup__vk{
+    margin-left: -0.1px;
+    &:before{
+        content: "\f189";
+    }
+}
+
+.popup__close:hover,
+.popup__instagram:hover,
+.popup__vk:hover{
+    transition: all 0.5s;
+    background-color: #fff;
+    &:before{
+        color: #000;
+        transition: all 0.5s;
+    }
+}
+
+.popup__overlay{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+}
+
+.menu__btn-active .popup__overlay{
+    display: block;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
 // --------- about ----------
 
 .about{
@@ -1272,136 +1404,6 @@ input[type=number]{
     }
 }
 
-// -----------popup-----------
-
-.popup{
-    display: flex;
-    position: absolute;
-    z-index: 20;
-    left: -100%;
-    top: 0;
-}
-
-.menu__btn-active .popup{
-    left: 0;
-}
-
-.popup__wrapper{
-    width: 750px;
-    background-color: rgb(37, 35, 39);
-    // background-color: #131313;
-    padding-top: 120px;
-    padding-left: 154px;
-    height: 100vh;
-}
-
-.popup__item{
-    max-width: 445px;
-    width: 100%;
-    .menu{
-        margin-top: 60px;
-        ul{
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            height: 315px;
-            li{
-                margin-bottom: 35px;
-                width: 290px;
-            }
-            a{
-                color: #fff;
-                font-size: 24px;
-                line-height: 28px;
-                font-family: $jura;
-                padding-bottom: 3px;
-                &:hover{
-                    border-bottom: 2px solid #fff;
-                    
-                }
-            }
-        } 
-    }
-    .popup__time{
-        font-size: 24px;
-        line-height: 28px;
-        font-family: $jura;
-        margin-top: 290px;
-    }
-}
-
-.popup__btn{
-    display: flex;
-}
-
-.popup__close,
-.popup__instagram,
-.popup__vk{
-    width: 85px;
-    height: 85px;
-    background-color: grey;
-    display: block;
-    cursor: pointer;
-    // &:hover{
-    //     background-color: #fff;
-    // }
-}
-
-.popup__close,
-.popup__instagram,
-.popup__vk{
-    position: relative;
-    transition: all 0.5s;
-    &:before{
-        position: absolute;
-        font-family: "icomoon";
-        content: "\f00d";
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: #fff;
-        font-size: 38px;
-        transition: all 0.5s;
-    }
-}
-
-.popup__instagram{
-    &:before{
-        content: "\f16d";
-    } 
-}
-
-.popup__vk{
-    &:before{
-        content: "\f189";
-    }
-}
-
-.popup__close:hover,
-.popup__instagram:hover,
-.popup__vk:hover{
-    transition: all 0.5s;
-    background-color: #fff;
-    &:before{
-        color: #000;
-        transition: all 0.5s;
-    }
-}
-
-.popup__overlay{
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 10;
-}
-
-.menu__btn-active .popup__overlay{
-    display: block;
-    background-color: rgba(0, 0, 0, 0.8);
-}
 
 
 
