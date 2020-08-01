@@ -23,6 +23,8 @@ $(function () {
 
     popupMenu(".menu__btn")
 
+
+
     $(".btn__down").click(function(){
         $("html, body").animate({scrollTop:$(document).height()}, 2000);
 
@@ -30,8 +32,38 @@ $(function () {
     });
 
 
-    $('.gallery__slider').slick({
+    $('.advantage-slider').slick({
         // dots: true,
+        infinite: true,
+        speed: 1500,
+        slidesToShow: 1,
+        centerMode: true,
+        // centerPadding: "120px",
+        // variableWidth: true,
+        autoplay: true,
+        prevArrow: '<button type="button" class="slick-btn slick-prev"></button>',
+        nextArrow: '<button type="button" class="slick-btn slick-next"></button>',
+    });
+    
+
+    $('.gallery__title').slick({
+        // dots: true,
+        infinite: true,
+        speed: 1000,
+        slidesToShow: 1,
+        centerMode: true,
+        centerPadding: "120px",
+        variableWidth: false,
+        // autoplay: true,
+        fade: true,
+        asNavFor: ".gallery__slider",
+        arrows: false,
+        prevArrow: '<button type="button" class="slick-btn slick-prev"></button>',
+        nextArrow: '<button type="button" class="slick-btn slick-next"></button>',
+    });
+
+
+    $('.gallery__slider').slick({
         infinite: true,
         speed: 1500,
         slidesToShow: 1,
@@ -39,9 +71,24 @@ $(function () {
         centerPadding: "120px",
         variableWidth: true,
         autoplay: true,
+        asNavFor: ".gallery__title",
         prevArrow: '<button type="button" class="slick-btn slick-prev"></button>',
         nextArrow: '<button type="button" class="slick-btn slick-next"></button>',
+        responsive: [
+            {
+              breakpoint: 700,
+              settings: {
+                centerPadding: "0px",
+                centerMode: true,
+                // cssEase: 'linear',
+                fade: true,
+                slidesToShow: 1,
+                variableWidth: false,
+              }
+            },
+        ]
     });
+
 
 
     
@@ -142,9 +189,78 @@ $(function () {
         speed: 500,
         fade: true,
         cssEase: 'linear',
+        adaptiveHeight: true,
         prevArrow: '<button type="button" class="slick-btn slick-prev"></button>',
         nextArrow: '<button type="button" class="slick-btn slick-next"></button>',
+        responsive: [
+            {
+              breakpoint: 1101,
+              settings: {
+                centerPadding: "0px",
+                centerMode: false,
+                slidesToShow: 2,
+                fade: false,
+              }
+            },
+            {
+                breakpoint: 980,
+                settings: {
+                  centerPadding: "60px",
+                  centerMode: true,
+                  slidesToShow: 1,
+                  fade: false,
+                  centerMode: true,
+                }
+              },
+              {
+                breakpoint: 700,
+                settings: {
+                  centerPadding: "40px",
+                  centerMode: true,
+                  slidesToShow: 1,
+                  fade: false
+                }
+              },
+        ]
     });
 
+    // function popupReviews(selector){
+    //     let reviews = $(selector);
+    //     let button = reviews.find(".reviews__btn");
+    //     // let links = menu.find(".menu__link");
+    //     // let overlay = menu.find(".popup__overlay");
+    //     let close = menu.find(".reviews__btn-close");
+
+    //     button.on("click", (e) => {
+    //         e.preventDefault()
+    //         toggleMenu()
+    //     })
+
+    //     // links.on("click", () => toggleMenu());
+    //     // overlay.on("click", () => toggleMenu());
+    //     close.on("click", () => toggleMenu());
+
+    //     function toggleMenu(){
+    //         menu.toggleClass("menu2__btn-active");
+    //     }
+    // }
+
+    // popupReviews(".menu__btn")
+
+    // function readMore(){
+    //     let text = document.querySelector(".reviews__slider-text");
+    //     let btn = document.querySelector(".reviews__btn");
+    //     let btnClose = document.querySelector(".reviews__button-close");
+
+    //     if(text.style.display == "block"){
+    //         btnClose.style.display="inline";
+    //         btn.style.display="none";
+    //     } else {
+    //         text.style.display == "none";
+    //         btnClose.style.display="none";
+    //         btn.style.display="block";
+    //     }
+    // }
+    // readMore()
 
 })
