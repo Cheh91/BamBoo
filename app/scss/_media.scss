@@ -5,29 +5,30 @@
     }
     .reviews__slider-item {
         width: 1200px;
-        .reviews__slider-text {
-            // padding: 20px 40px 0px 35px;
-            margin: 58px 40px 0px 45px;
-            width: 615px;
-        }
-    }
-    .reviews__slider .slick-prev {
         
-        left: -100px;
-        width: 65px;
-        height: 65px;
-        &:before{
-            width: 12px;
-            height: 23px;
-        }
     }
-    .reviews__slider .slick-next {
-        right: -100px;
-        width: 65px;
-        height: 65px;
-        &:before{
-            width: 12px;
-            height: 23px;
+    .reviews__slider-text {
+        margin: 58px 40px 0px 45px;
+        width: 615px;
+    }
+    .reviews__slider{
+        .slick-prev {
+            left: -100px;
+            width: 65px;
+            height: 65px;
+            &:before{
+                width: 12px;
+                height: 23px;
+            }
+        }
+        .slick-next {
+            right: -100px;
+            width: 65px;
+            height: 65px;
+            &:before{
+                width: 12px;
+                height: 23px;
+            }
         }
     }  
 }
@@ -77,8 +78,6 @@
     }
     .form__select,
     .form__select-2 {
-        // max-width: 300px;
-        // width: 100%;
         width: 294px;
     }
     .form__select-2 {
@@ -373,7 +372,6 @@
         position: absolute;
         top: 231px;
         z-index: -1;
-        // margin-top: 40px;
     }
     .form__select-3 {
         margin-left: 34px;
@@ -475,17 +473,19 @@
         margin-top: 11px;
         margin-left: 25px;
     }
-    .reviews__slider .slick-prev {
-        background: #fff;
-        position: absolute;
-        left: 400px;
-        top: 115%;
-    }
-    .reviews__slider .slick-next {
-        background: #fff;
-        position: absolute;
-        right: 400px;
-        top: 115%;
+    .reviews__slider{
+        .slick-prev {
+            background: #fff;
+            position: absolute;
+            left: 400px;
+            top: 115%;
+        }
+        .slick-next {
+            background: #fff;
+            position: absolute;
+            right: 400px;
+            top: 115%;
+        }
     }
     .reviews__item{
         .slick-slide img {
@@ -830,8 +830,7 @@
     }
     .menu__btn-active .popup {
         width: 100vw;
-    }
-    
+    }  
 }
 
 @media (max-width: 700px) {

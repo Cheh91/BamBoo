@@ -231,5 +231,12 @@ $(function () {
             $(this).parent(".reviews__slider-text").hide();
         });
     });
+    
+
+    new WOW(
+        {
+          mobile: false
+        }
+      ).init();
         
 })
