@@ -20,7 +20,6 @@ $(function () {
             menu.toggleClass("menu__btn-active");
         }
     }
-
     popupMenu(".menu__btn")
 
 
@@ -54,7 +53,7 @@ $(function () {
         centerMode: true,
         centerPadding: "120px",
         variableWidth: false,
-        // autoplay: true,
+        autoplay: true,
         fade: true,
         asNavFor: ".gallery__slider",
         arrows: false,
@@ -91,7 +90,6 @@ $(function () {
 
 
 
-    
     $(".default__option").click(function () {
         $(this).parent().toggleClass("active");
     });
@@ -101,7 +99,6 @@ $(function () {
         $(".default__option li").html(currentele);
         $(this).parents(".form__select").removeClass("active");
     });
-
 
 
     $(".default__option-2").click(function () {
@@ -126,7 +123,6 @@ $(function () {
     });
 
 
-
     $(".sub-form__default-option").click(function () {
         $(this).parent().toggleClass("active");
     });
@@ -149,8 +145,8 @@ $(function () {
     });
 
 
-    jQuery('<div class="quantity-nav"><div class="quantity-button quantity-up"><img src="img/plus.svg" alt=""></div><div class="quantity-button quantity-down"><img src="img/minus.svg" alt=""></div></div>').insertAfter('.quantity input');
-    jQuery('.quantity').each(function () {
+    $('<div class="quantity-nav"><div class="quantity-button quantity-up"><img src="img/plus.svg" alt=""></div><div class="quantity-button quantity-down"><img src="img/minus.svg" alt=""></div></div>').insertAfter('.quantity input');
+    $('.quantity').each(function () {
         var spinner = jQuery(this),
             input = spinner.find('input[type="number"]'),
             btnUp = spinner.find('.quantity-up'),
@@ -179,7 +175,6 @@ $(function () {
             spinner.find("input").val(newVal);
             spinner.find("input").trigger("change");
         });
-
     });
 
 
@@ -224,43 +219,17 @@ $(function () {
         ]
     });
 
-    // function popupReviews(selector){
-    //     let reviews = $(selector);
-    //     let button = reviews.find(".reviews__btn");
-    //     // let links = menu.find(".menu__link");
-    //     // let overlay = menu.find(".popup__overlay");
-    //     let close = menu.find(".reviews__btn-close");
 
-    //     button.on("click", (e) => {
-    //         e.preventDefault()
-    //         toggleMenu()
-    //     })
-
-    //     // links.on("click", () => toggleMenu());
-    //     // overlay.on("click", () => toggleMenu());
-    //     close.on("click", () => toggleMenu());
-
-    //     function toggleMenu(){
-    //         menu.toggleClass("menu2__btn-active");
-    //     }
-    // }
-
-    // popupReviews(".menu__btn")
-
-    // function readMore(){
-    //     let text = document.querySelector(".reviews__slider-text");
-    //     let btn = document.querySelector(".reviews__btn");
-    //     let btnClose = document.querySelector(".reviews__button-close");
-
-    //     if(text.style.display == "block"){
-    //         btnClose.style.display="inline";
-    //         btn.style.display="none";
-    //     } else {
-    //         text.style.display == "none";
-    //         btnClose.style.display="none";
-    //         btn.style.display="block";
-    //     }
-    // }
-    // readMore()
-
+    $(function(){
+        $(".reviews__btn").click(function(){
+            $(this).parent().find(".reviews__slider-text").show(); // - 
+            // console.log($(this));
+            // console.log($(".reviews__slider-text"));
+            // console.log($(this).parent().find("reviews__slider-text"));
+        });
+        $(".reviews__button-close").click(function(){
+            $(this).parent(".reviews__slider-text").hide();
+        });
+    });
+        
 })

@@ -662,6 +662,7 @@ body{
 
 .form__select{
     margin-left: 30px;
+    width: 378px;
 }
 
 .form__item{
@@ -671,7 +672,8 @@ body{
 }
 
 .form__select-2{
-    margin-left: 71px;
+    margin-left: 70.5px;
+    width: 378px;
 }
 
 .form__paragraph{
@@ -688,7 +690,7 @@ body{
         position: relative;
         border-radius: 10px;
         li{
-            padding: 28px 240px 28px 30px;
+            padding: 28px 0px 28px 30px;
             cursor: pointer;
             font-family: $jura;
             font-size: 32px;
@@ -718,7 +720,7 @@ body{
     border-radius: 10px;
     display: none;
     li{
-        padding: 20px 40px;
+        padding: 20px 0px 20px 30px;
         font-size: 32px;
         line-height: 38px;
         &:hover{
@@ -840,7 +842,7 @@ input[type=number]{
         position: relative;
         border-radius: 10px;
         li{
-            padding: 28px 20px 28px 30px;
+            padding: 28px 0px 28px 30px;
             cursor: pointer;
             font-family: $jura;
             font-size: 32px;
@@ -867,7 +869,7 @@ input[type=number]{
         border-radius: 10px;
         display: none;
         li{
-            padding: 20px 40px;
+            padding: 20px 0px 20px 30px;
             font-size: 32px;
             line-height: 38px;
             &:hover{
@@ -1035,7 +1037,7 @@ input[type=number]{
         position: relative;
         border-radius: 10px;
         li{
-            padding: 28px 15px 28px 30px;
+            padding: 28px 0px 28px 30px;
             cursor: pointer;
             font-family: $jura;
             font-size: 32px;
@@ -1062,7 +1064,7 @@ input[type=number]{
         border-radius: 10px;
         display: none;
         li{
-            padding: 20px 40px;
+            padding: 20px 0px 20px 40px;
             font-size: 32px;
             line-height: 38px;
             &:hover{
@@ -1109,7 +1111,7 @@ input[type=number]{
         position: relative;
         border-radius: 10px;
         li{
-            padding: 28px 15px 28px 30px;
+            padding: 28px 0px 28px 30px;
             cursor: pointer;
             font-family: $jura;
             font-size: 32px;
@@ -1136,7 +1138,7 @@ input[type=number]{
         border-radius: 10px;
         display: none;
         li{
-            padding: 20px 40px;
+            padding: 20px 0px 20px 30px;
             font-size: 32px;
             line-height: 38px;
             &:hover{
@@ -1308,7 +1310,12 @@ input[type=number]{
         margin: 58px 75px 0px 45px;
         width: 700px;
         height: 340px;
-        overflow-y: auto;
+        // overflow-y: auto;
+        .slider-text{
+            overflow-y: auto;
+            width: auto;
+            height: 268px;
+        }
     }
     .reviews__slider-suptext{
         font-size: 36px;
@@ -1317,8 +1324,6 @@ input[type=number]{
         margin-left: 45px;
     }
 }
-
-
 
 .reviews__slider{
     position: relative;
@@ -1379,6 +1384,9 @@ input[type=number]{
             
         }
     }
+    .slick-list .draggable{
+        padding: 0px;
+    }
     .slick-dots{
         position: absolute;
         left: 50%;
@@ -1416,7 +1424,6 @@ input[type=number]{
     border-radius: 5px;
     font-family: $jura;
     font-size: 18px;
-    // font-weight: 700;
     color: #000;
     padding: 17px 24px;
     margin: 0 auto;
@@ -1427,6 +1434,22 @@ input[type=number]{
 
 .reviews__button-close{
     display: none;
+    border: none;
+    background: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    outline: none;
+    &:before{
+        font-family: "icomoon";
+        content: "\f00d";
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 26px;
+        color: #fff;
+        font-size: 400;
+    }
 }
 
 

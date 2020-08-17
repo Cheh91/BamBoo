@@ -77,8 +77,9 @@
     }
     .form__select,
     .form__select-2 {
-        max-width: 300px;
-        width: 100%;
+        // max-width: 300px;
+        // width: 100%;
+        width: 294px;
     }
     .form__select-2 {
         margin-left: 64px;
@@ -87,13 +88,13 @@
     .form__select .default__option-2 li,
     .form__select-2 .default__option li,
     .form__select-2 .default__option-2 li {
-        padding: 20px 191px 20px 30px;
+        padding: 20px 0px 20px 20px;
         font-size: 25px;
         line-height: 30px;
     }
     .select__ul li,
     .select__ul-2 li {
-        padding: 16px 30px;
+        padding: 16px 0px 16px 20px;
         font-size: 25px;
         line-height: 30px;
     }
@@ -131,16 +132,16 @@
         margin-left: 30px;
         .default__option-3{
             &:after {
-                font-size: 38px;
+                font-size: 36px;
             }
             li {
-                padding: 20px 20px 20px 30px;
+                padding: 20px 0px 20px 20px;
                 font-size: 25px;
                 line-height: 30px;
             }
         }
         .select__ul-3 li {
-            padding: 16px 30px;
+            padding: 16px 0px 16px 20px;
             font-size: 25px;
             line-height: 30px;
         }
@@ -153,7 +154,7 @@
         font-size: 27px;
         width: 480px;
         height: 75px;
-        margin-left: 46px;
+        margin-left: 45px;
         padding-left: 20px;
         padding-right: 20px;
         color: #fff;
@@ -197,7 +198,7 @@
     }
     .sub-form__select .sub-form__default-option li,
     .sub-form__select-2 .sub-form__default-option-2 li {
-        padding: 20px 15px 20px 30px;
+        padding: 20px 0px 20px 20px;
         font-size: 25px;
         line-height: 30px;
     }
@@ -208,9 +209,9 @@
             font-size: 38px;
         }
         .sub-form__select-ul li {
-            padding: 12px 30px;
+            padding: 16px 0px 16px 20px;
             font-size: 25px;
-            line-height: 38px;
+            line-height: 30px;
         }
     }
     .sub-form__paragraph-2,
@@ -224,9 +225,9 @@
             font-size: 38px;
         }
         .sub-form__select-ul-2 li {
-            padding: 12px 30px;
+            padding: 16px 0px 16px 20px;
             font-size: 25px;
-            line-height: 38px;
+            line-height: 30px;
         }
     }  
     .sub-form__box-inner input {
@@ -280,28 +281,6 @@
 }
 
 @media (max-width: 1450px) {
-    // .slick-slide img {
-    //     width: 400px;
-    //     height: 400px;
-    // }
-    // .reviews__slider-item {
-    //     width: 960px;
-    // }
-    // .reviews__slider-item .reviews__slider-text {
-    //     margin: 30px 30px 0px 40px;
-    //     width: 490px;
-    //     height: 279px;
-    //     font-size: 20px;
-    //     line-height: 26px;
-    // }
-    // .reviews__slider-inner .reviews__slider-suptext {
-    //     font-size: 30px;
-    //     line-height: 40px;
-    // }
-    // .reviews__item {
-    //     padding-top: 75px;
-    //     width: 960px;
-    // }
     .gallery__slider-image{
         height: 400px;
         img{
@@ -321,8 +300,7 @@
             right: 510px;
             top: 115%;
         }
-    }
-    
+    } 
 }
 
 @media (max-width: 1320px) {
@@ -398,7 +376,7 @@
         // margin-top: 40px;
     }
     .form__select-3 {
-        margin-left: 35px;
+        margin-left: 34px;
     }
     .amount__item-inner{
         margin-top: 40px;
@@ -468,7 +446,7 @@
         margin-left: 83px;
     }
     .sub-form__box-inner input {
-        margin-left: 46px;
+        margin-left: 45px;
     }
     .sub-form__box-phone__number {
         margin-left: 54px;
@@ -644,14 +622,17 @@
             line-height: 27px;
             background-color: rgb(86, 85, 135);
             position: absolute;
-            border-radius: 5px;
-            padding: 10px;
-            top: 0;
+            border-radius: 10px;
+            padding: 15px;
+            padding-right: 25px;
+            top: -1px;
             color: #fff;
             // overflow: hidden;
+            .slider-text{
+                height: auto;
+            }
         }
     }
-    
     .reviews__slider-inner .reviews__slider-suptext {
         font-size: 36px;
         line-height: 43px;
@@ -676,11 +657,17 @@
         height: 400px;
     }
 
+    // ---------text---------
+
     .reviews__button-close{
         display: block;
         position: absolute;
         top: 0;
         right: 0;
+    }
+
+    .reviews__slider-text{
+        
     }
 }
 
@@ -983,7 +970,7 @@
     }
     .gallery__title {
         width: 410px;
-        margin-top: 60px;
+        margin-top: 20px;
     }
     .gallery__slider .slick-prev {
         left: 20px;
@@ -1054,7 +1041,7 @@
     .form__select .default__option-2 li,
     .form__select-2 .default__option li,
     .form__select-2 .default__option-2 li {
-        padding: 17px 300px 18px 30px;
+        padding: 18px 0px 18px 30px;
         font-size: 20px;
         line-height: 22px;
         // border: 2px solid #fff;
@@ -1073,8 +1060,8 @@
     }
     .form__select,
     .form__select-2 {
-        max-width: 400px;
-        width: 100%;
+        width: 400px;
+        // width: 100%;
     }
     .form__select .default__option:after,
     .form__select .default__option-2:after,
@@ -1084,7 +1071,7 @@
     }
     .select__ul li,
     .select__ul-2 li {
-        padding: 12px 30px;
+        padding: 13px 0px 13px 30px;
         font-size: 20px;
         line-height: 25px;
     }
@@ -1155,7 +1142,7 @@
         .default__option-3{
             border: 2px solid #fff;
             li {
-                padding: 13px 20px 13px 30px;
+                padding: 13px 0px 13px 30px;
                 font-size: 25px;
                 line-height: 30px;
             }
@@ -1163,9 +1150,12 @@
                 font-size: 30px;
             }
         }
-        .select__ul-3 li {
-            padding: 13px 30px;
-        }
+        .select__ul-3{
+            border: 2px solid #fff;
+            li {
+                padding: 13px 0px 13px 30px;
+            }
+        } 
     }
     .form__box-inner{
         flex-direction: column;
@@ -1247,15 +1237,18 @@
     }
     .sub-form__select .sub-form__default-option li,
     .sub-form__select-2 .sub-form__default-option-2 li {
-        padding: 17px 15px 17px 30px;
+        padding: 18px 0px 18px 30px;
         font-size: 20px;
         line-height: 22px;
     }
     .sub-form__select .sub-form__default-option:after {
         font-size: 30px;
     }
-    .sub-form__select .sub-form__select-ul li {
-        padding: 8px 30px;
+    .sub-form__select .sub-form__select-ul li,
+    .sub-form__select-2 .sub-form__select-ul-2 li {
+        padding: 13px 0px 13px 30px;
+        font-size: 20px;
+        line-height: 25px;
     }
     .sub-form__paragraph-2,
     .sub-form__box-phone__name {
@@ -1360,6 +1353,39 @@
     }
     .reviews__slider-item {
         width: 285px;
+        border-radius: 5px;
+        .reviews__slider-text{
+            display: none;
+            margin: 0px 0px 0px 0px;
+            width: 287px;
+            height: 423px;
+            font-size: 16px;
+            line-height: 23px;
+            background-color: rgb(86, 85, 135);
+            position: absolute;
+            border-radius: 5px;
+            padding: 10px;
+            padding-right: 20px;
+            top: -1px;
+            left: -1px;
+            color: #fff;
+            // overflow: hidden;
+            .slider-text{
+                overflow-y: auto;
+                width: auto;
+                height: 400px;
+            }
+        }
+        .reviews__button-close {
+            width: 23px;
+            height: 23px;
+            &:before {
+                font-size: 20px;
+            }
+        }
+    }
+    .reviews__slider-item .reviews__slider-text .slider-text {
+        overflow-y: auto;
     }
     .reviews__slider-inner .reviews__slider-suptext {
         font-size: 24px;
@@ -1449,14 +1475,13 @@
     }
     .form__select,
     .form__select-2 {
-        max-width: 300px;
-        width: 100%;
+        width: 300px;
     }
     .form__select .default__option li,
     .form__select .default__option-2 li,
     .form__select-2 .default__option li,
     .form__select-2 .default__option-2 li {
-        padding: 18px 240px 18px 30px;
+        padding: 18px 0px 18px 30px;
     }
     .form__item {
         width: 300px;
@@ -1532,6 +1557,27 @@
     }
     .reviews__slider-item {
         width: 200px;
+        .reviews__slider-text {
+            display: none;
+            margin: 0px 0px 0px 0px;
+            width: 202px;
+            height: 338px;
+            font-size: 16px;
+            line-height: 21px;
+            background-color: #565587;
+            position: absolute;
+            border-radius: 5px;
+            padding: 10px;
+            padding-right: 20px;
+            top: -1px;
+            left: -1px;
+            color: #fff;
+            .slider-text{
+                overflow-y: auto;
+                width: auto;
+                height: 315px;
+            }
+        }
     }
     .reviews__sub-title {
         font-size: 24px;
@@ -1548,4 +1594,11 @@
         width: 100%;
         height: 250px;
     }
+    .reviews__button-close {
+        width: 23px;
+        height: 23px;
+        &:before {
+            font-size: 20px;
+        }
+    } 
 }
