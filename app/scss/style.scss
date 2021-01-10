@@ -62,9 +62,9 @@ body{
 }
 
 .container-header {
-    max-width: 1920px;
+    max-width: 1720px;
     width: 100%;
-    padding: 0 140px;
+    padding: 0 20px;
     margin: 0 auto;
 }
 
@@ -88,8 +88,8 @@ body{
     line-height: 26px;
     color: #FFFFFF;
     cursor: pointer;
-    position: absolute;
-    right: 480px;
+    margin-left: auto;
+    margin-right: 50px;
 }
 
 .header-phone{
@@ -285,7 +285,7 @@ body{
     position: relative;
     &__item{
         width: 645px;
-        margin-left: 264px;
+        margin-left: 130px;
         padding-top: 370px;  
     }
     &__item-title{
@@ -656,29 +656,7 @@ body{
 .form__select{
     margin-left: 30px;
     width: 378px;
-}
-
-.form__item{
-    position: absolute;
-    z-index: 1;
-    top: 430px;
-}
-
-.form__select-2{
-    margin-left: 70.5px;
-    width: 378px;
-}
-
-.form__paragraph{
-    font-size: 36px;
-    line-height: 40px;
-    padding-top: 30px;
-}
-
-.form__select,
-.form__select-2{
-    .default__option,
-    .default__option-2{
+    .default__option{
         border: 3px solid #fff;
         position: relative;
         border-radius: 10px;
@@ -699,13 +677,28 @@ body{
             font-size: 50px;
             font-weight: 200;
             cursor: pointer;
-            transition: all 0.8s; 
+            transition: all 0.3s; 
         }
     }
 }
 
-.select__ul,
-.select__ul-2{
+.form__item{
+    position: absolute;
+    z-index: 1;
+    top: 430px;
+}
+
+.form__select-2{
+    margin-left: 70.5px;
+}
+
+.form__paragraph{
+    font-size: 36px;
+    line-height: 40px;
+    padding-top: 30px;
+}
+
+.select__ul{
     border-radius: 5px;
     background: grey;
     cursor: pointer;
@@ -734,15 +727,12 @@ body{
     }
 }
 
-.form__select.active .select__ul,
-.form__select-2.active .select__ul-2{
+.form__select.active .select__ul{
     display: block;
     z-index: 100;
 }
 
-.form__select.active .default__option:after,
-.form__select-2.active .default__option-2:after,
-.form__select-3.active .default__option-3:after{
+.form__select.active .default__option:after{
     transform: rotate(-180deg);
     top: 25%;
 }
@@ -830,63 +820,6 @@ input[type=number]{
     width: 247px;
     margin-left: 30px;
     margin-right: 20px;
-    .default__option-3{
-        border: 3px solid #fff;
-        position: relative;
-        border-radius: 10px;
-        li{
-            padding: 28px 0px 28px 30px;
-            cursor: pointer;
-            font-family: $jura;
-            font-size: 32px;
-            line-height: 38px;
-        }
-        &:after{
-            position: absolute;
-            content: "\f107";
-            top: 50%;
-            transform: translateY(-50%);
-            right: 20px;
-            font-family: "icomoon";
-            font-size: 50px;
-            font-weight: 200;
-            cursor: pointer;
-            transition: all 0.8s; 
-        }
-    }
-    .select__ul-3{
-        border-radius: 5px;
-        background: grey;
-        cursor: pointer;
-        border: 3px solid #fff;
-        border-radius: 10px;
-        display: none;
-        li{
-            padding: 20px 0px 20px 30px;
-            font-size: 32px;
-            line-height: 38px;
-            &:hover{
-                background: #414b57;
-                transition: all 0.4s; 
-            }
-        }
-        li + li{
-            border-top: 2px solid #111;
-        }
-        li:first-child{
-            border-top-left-radius: 6px;
-            border-top-right-radius: 6px;
-        }
-        li:last-child{
-            border-bottom-left-radius: 6px;
-            border-bottom-right-radius: 6px;
-        }
-    }
-}
-
-.form__select-3.active .select__ul-3{
-    display: block;
-    z-index: 100;
 }
 
 .form__box{
@@ -1020,68 +953,6 @@ input[type=number]{
 .sub-form__select{
     width: 450px;
     margin-left: 30px;
-    .sub-form__default-option{
-        border: 3px solid #fff;
-        position: relative;
-        border-radius: 10px;
-        li{
-            padding: 28px 0px 28px 30px;
-            cursor: pointer;
-            font-family: $jura;
-            font-size: 32px;
-            line-height: 38px;
-        }
-        &:after{
-            position: absolute;
-            content: "\f107";
-            top: 50%;
-            transform: translateY(-50%);
-            right: 20px;
-            font-family: "icomoon";
-            font-size: 50px;
-            font-weight: 200;
-            cursor: pointer;
-            transition: all 0.8s; 
-        }
-    }
-    .sub-form__select-ul{
-        border-radius: 5px;
-        background: grey;
-        cursor: pointer;
-        border: 3px solid #fff;
-        border-radius: 10px;
-        display: none;
-        li{
-            padding: 20px 0px 20px 40px;
-            font-size: 32px;
-            line-height: 38px;
-            &:hover{
-                background: #414b57;
-                transition: all 0.4s; 
-            }
-        }
-        li + li{
-            border-top: 2px solid #111;
-        }
-        li:first-child{
-            border-top-left-radius: 6px;
-            border-top-right-radius: 6px;
-        }
-        li:last-child{
-            border-bottom-left-radius: 6px;
-            border-bottom-right-radius: 6px;
-        }
-    }
-}
-
-.sub-form__select.active .sub-form__select-ul{
-    display: block;
-    z-index: 100;
-}
-
-.sub-form__select.active .sub-form__default-option:after{
-    transform: rotate(-180deg);
-    top: 25%;
 }
 
 .sub-form__paragraph-2{
@@ -1093,69 +964,7 @@ input[type=number]{
 
 .sub-form__select-2{
     width: 317px;
-    margin-left: 30px;
-    .sub-form__default-option-2{
-        border: 3px solid #fff;
-        position: relative;
-        border-radius: 10px;
-        li{
-            padding: 28px 0px 28px 30px;
-            cursor: pointer;
-            font-family: $jura;
-            font-size: 32px;
-            line-height: 38px;
-        }
-        &:after{
-            position: absolute;
-            content: "\f107";
-            top: 50%;
-            transform: translateY(-50%);
-            right: 20px;
-            font-family: "icomoon";
-            font-size: 50px;
-            font-weight: 200;
-            cursor: pointer;
-            transition: all 0.8s; 
-        }
-    }
-    .sub-form__select-ul-2{
-        border-radius: 5px;
-        background: grey;
-        cursor: pointer;
-        border: 3px solid #fff;
-        border-radius: 10px;
-        display: none;
-        li{
-            padding: 20px 0px 20px 30px;
-            font-size: 32px;
-            line-height: 38px;
-            &:hover{
-                background: #414b57;
-                transition: all 0.4s; 
-            }
-        }
-        li + li{
-            border-top: 2px solid #111;
-        }
-        li:first-child{
-            border-top-left-radius: 6px;
-            border-top-right-radius: 6px;
-        }
-        li:last-child{
-            border-bottom-left-radius: 6px;
-            border-bottom-right-radius: 6px;
-        }
-    }
-}
-
-.sub-form__select-2.active .sub-form__select-ul-2{
-    display: block;
-    z-index: 100;
-}
-
-.sub-form__select-2.active .sub-form__default-option-2:after{
-    transform: rotate(-180deg);
-    top: 25%;
+    margin-left: 36px;
 }
 
 .sub-form__box{
@@ -1310,9 +1119,6 @@ input[type=number]{
 .reviews__slider{
     position: relative;
     margin-top: 50px;
-    // .slick-list {
-    //     overflow: visible;
-    // }
     .slick-prev{
         background: #fff;
         position: absolute;

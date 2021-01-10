@@ -83,24 +83,17 @@
     .form__select-2 {
         margin-left: 64px;
     }
-    .form__select .default__option li,
-    .form__select .default__option-2 li,
-    .form__select-2 .default__option li,
-    .form__select-2 .default__option-2 li {
+    .form__select .default__option li{
         padding: 20px 0px 20px 20px;
         font-size: 25px;
         line-height: 30px;
     }
-    .select__ul li,
-    .select__ul-2 li {
+    .select__ul li {
         padding: 16px 0px 16px 20px;
         font-size: 25px;
         line-height: 30px;
     }
-    .form__select .default__option:after,
-    .form__select .default__option-2:after,
-    .form__select-2 .default__option:after,
-    .form__select-2 .default__option-2:after {
+    .form__select .default__option:after{
         font-size: 36px;
     }
     .quantity input {
@@ -129,21 +122,6 @@
     .form__select-3{
         width: 200px;
         margin-left: 30px;
-        .default__option-3{
-            &:after {
-                font-size: 36px;
-            }
-            li {
-                padding: 20px 0px 20px 20px;
-                font-size: 25px;
-                line-height: 30px;
-            }
-        }
-        .select__ul-3 li {
-            padding: 16px 0px 16px 20px;
-            font-size: 25px;
-            line-height: 30px;
-        }
     }
     .form__box-name {
         font-size: 30px;
@@ -190,16 +168,11 @@
         margin-left: 40px;
     }
     .sub-form__paragraph,
-    .sub-form__box-name {
+    .sub-form__box-name,
+    .sub-form__paragraph-2 {
         font-size: 30px;
         line-height: 34px;
         padding-top: 22px;
-    }
-    .sub-form__select .sub-form__default-option li,
-    .sub-form__select-2 .sub-form__default-option-2 li {
-        padding: 20px 0px 20px 20px;
-        font-size: 25px;
-        line-height: 30px;
     }
     .sub-form__select {
         width: 370px;
@@ -207,28 +180,7 @@
         .sub-form__default-option:after {
             font-size: 38px;
         }
-        .sub-form__select-ul li {
-            padding: 16px 0px 16px 20px;
-            font-size: 25px;
-            line-height: 30px;
-        }
-    }
-    .sub-form__paragraph-2,
-    .sub-form__box-phone__name {
-        font-size: 30px;
-        line-height: 34px;
-        padding-top: 20px;
-    }
-    .sub-form__select-2{
-        .sub-form__default-option-2:after {
-            font-size: 38px;
-        }
-        .sub-form__select-ul-2 li {
-            padding: 16px 0px 16px 20px;
-            font-size: 25px;
-            line-height: 30px;
-        }
-    }  
+    } 
     .sub-form__box-inner input {
         font-size: 27px;
         width: 480px;
@@ -411,9 +363,6 @@
     }
     .sub-form__paragraph-2 {
         margin-left: 0px;
-    }
-    .sub-form__select-2 {
-        margin-left: 35px;
     }
     .sub-form__wrap {
         position: absolute;
@@ -627,7 +576,6 @@
             padding-right: 25px;
             top: -1px;
             color: #fff;
-            // overflow: hidden;
             .slider-text{
                 height: auto;
             }
@@ -664,10 +612,6 @@
         position: absolute;
         top: 0;
         right: 0;
-    }
-
-    .reviews__slider-text{
-        
     }
 }
 
@@ -1015,7 +959,7 @@
         margin-right: 0px;
         text-align: center;
         margin-top: 24px;
-        .button__standard, {
+        .button__standard {
             padding: 18px 32px;
         }
         .button__nominal{
@@ -1027,7 +971,6 @@
     .form__box {
         margin-top: 25px;
         margin-left: 0px;
-        // display: block;
         left: 50%;
         transform: translate(-50%, 0);
         flex-direction: column;
@@ -1036,14 +979,10 @@
         margin-left: 0px;
 
     }
-    .form__select .default__option li,
-    .form__select .default__option-2 li,
-    .form__select-2 .default__option li,
-    .form__select-2 .default__option-2 li {
+    .form__select .default__option li {
         padding: 18px 0px 18px 30px;
         font-size: 20px;
         line-height: 22px;
-        // border: 2px solid #fff;
     }
     .form__paragraph {
         font-size: 24px;
@@ -1051,57 +990,29 @@
         padding-top: 0px;
         margin-bottom: 15px;
     }
-    .form__select .default__option,
-    .form__select .default__option-2,
-    .form__select-2 .default__option,
-    .form__select-2 .default__option-2 {
+    .form__select .default__option {
         border: 2px solid #fff;
     }
     .form__select,
     .form__select-2 {
         width: 400px;
-        // width: 100%;
     }
-    .form__select .default__option:after,
-    .form__select .default__option-2:after,
-    .form__select-2 .default__option:after,
-    .form__select-2 .default__option-2:after {
+    .form__select .default__option:after {
         font-size: 30px;
     }
-    .select__ul li,
-    .select__ul-2 li {
+    .select__ul li{
         padding: 13px 0px 13px 30px;
         font-size: 20px;
         line-height: 25px;
     }
-    .select__ul,
-    .select__ul-2 {
-        border: 2px solid #fff;
-    }
-    .sub-form__select .sub-form__select-ul li {
-        padding: 12px 30px;
-        font-size: 20px;
-    }
-    .sub-form__select-2{
-        .sub-form__select-ul-2{
-            border: 2px solid #fff;
-        } 
-        li {
-            font-size: 20px;
-            line-height: 25px;
-        }
-    } 
-    .sub-form__select .sub-form__select-ul {
+    .select__ul {
         border: 2px solid #fff;
     }
     .form__item-inner{
         flex-direction: column;
     }
-    .form__select-2 {
-        margin-left: 0px;
-    }
     .form__item {
-        top: 300px;
+        top: 290px;
         width: 400px;
         margin-top: 0px;
     }
@@ -1110,11 +1021,15 @@
         height: 60px;
         font-size: 26px;
     }
-    .amount__item-inner,
-    .times__item-inner {
+    .amount__item-inner {
         flex-direction: column;
         margin-top: 0px;
         top: 115px;
+    }
+    .times__item-inner {
+        flex-direction: column;
+        margin-top: 0px;
+        top: 230px;
     }
     .quantity-button.quantity-down img,
     .quantity-button.quantity-up img {
@@ -1138,23 +1053,6 @@
     .form__select-3{
         margin-left: 0px;
         margin-right: 0px;
-        .default__option-3{
-            border: 2px solid #fff;
-            li {
-                padding: 13px 0px 13px 30px;
-                font-size: 25px;
-                line-height: 30px;
-            }
-            &:after {
-                font-size: 30px;
-            }
-        }
-        .select__ul-3{
-            border: 2px solid #fff;
-            li {
-                padding: 13px 0px 13px 30px;
-            }
-        } 
     }
     .form__box-inner{
         flex-direction: column;
@@ -1177,7 +1075,7 @@
         padding-top: 0;
     }
     .form__box {
-        top: 515px;
+        top: 620px;
     }
     .btn-form__box {
         font-size: 26px;
@@ -1191,7 +1089,7 @@
         margin-left: 0px;
     }
     .form{
-        height: 830px;
+        height: 860px;
     }
     .btn-form__box {
         padding: 16px 54px;
@@ -1210,8 +1108,7 @@
     .sub-form__wrap {
         flex-direction: column;
     }
-    .sub-form__select,
-    .sub-form__select-2 {
+    .sub-form__select {
         margin-left: 0px;
         width: 400px;
     }
@@ -1225,17 +1122,13 @@
     .sub-form__box {
         flex-direction: column-reverse;
     }
-    .sub-form__select-2 {
-        margin-left: 0;
-    }
     .sub-form__paragraph,
     .sub-form__box-name {
         font-size: 24px;
         line-height: 26px;
         padding-top: 33px;
     }
-    .sub-form__select .sub-form__default-option li,
-    .sub-form__select-2 .sub-form__default-option-2 li {
+    .sub-form__select .sub-form__default-option li {
         padding: 18px 0px 18px 30px;
         font-size: 20px;
         line-height: 22px;
@@ -1243,8 +1136,7 @@
     .sub-form__select .sub-form__default-option:after {
         font-size: 30px;
     }
-    .sub-form__select .sub-form__select-ul li,
-    .sub-form__select-2 .sub-form__select-ul-2 li {
+    .sub-form__select .sub-form__select-ul li {
         padding: 13px 0px 13px 30px;
         font-size: 20px;
         line-height: 25px;
@@ -1368,7 +1260,6 @@
             top: -1px;
             left: -1px;
             color: #fff;
-            // overflow: hidden;
             .slider-text{
                 overflow-y: auto;
                 width: auto;
@@ -1476,10 +1367,7 @@
     .form__select-2 {
         width: 300px;
     }
-    .form__select .default__option li,
-    .form__select .default__option-2 li,
-    .form__select-2 .default__option li,
-    .form__select-2 .default__option-2 li {
+    .form__select .default__option li {
         padding: 18px 0px 18px 30px;
     }
     .form__item {
@@ -1490,15 +1378,15 @@
     }
     .form__select-3 {
         width: 155px;
-        .default__option-3 li {
-            padding: 13px 20px 13px 20px;
-        }
-        .select__ul-3 li {
-            padding: 13px 25px;
-        }
     }
     .form__box-inner input {
         width: 300px;
+    }
+    .form__box {
+        top: 640px;
+    }
+    .times__item-inner {
+        right: 145px;
     }
     .form__wrapper-button .button__standard {
         padding: 18px 27px;

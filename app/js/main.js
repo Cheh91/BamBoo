@@ -94,55 +94,13 @@ $(function () {
         $(this).parent().toggleClass("active");
     });
 
-    $(".select__ul li").click(function () {
-        let currentele = $(this).html();
-        $(".default__option li").html(currentele);
+
+    $(this).find(".select__ul li").click(function () {
+        let option = $(this).html();
+        $(this).parents(".form__select").find(".default__option li").html(option);
         $(this).parents(".form__select").removeClass("active");
     });
 
-
-    $(".default__option-2").click(function () {
-        $(this).parent().toggleClass("active");
-    });
-
-    $(".select__ul-2 li").click(function () {
-        let currentele = $(this).html();
-        $(".default__option-2 li").html(currentele);
-        $(this).parents(".form__select-2").removeClass("active");
-    });
-
-
-    $(".default__option-3").click(function () {
-        $(this).parent().toggleClass("active");
-    });
-
-    $(".select__ul-3 li").click(function () {
-        let currentele = $(this).html();
-        $(".default__option-3 li").html(currentele);
-        $(this).parents(".form__select-3").removeClass("active");
-    });
-
-
-    $(".sub-form__default-option").click(function () {
-        $(this).parent().toggleClass("active");
-    });
-
-    $(".sub-form__select-ul li").click(function () {
-        let currentele = $(this).html();
-        $(".sub-form__default-option li").html(currentele);
-        $(this).parents(".sub-form__select").removeClass("active");
-    });
-
-
-    $(".sub-form__default-option-2").click(function () {
-        $(this).parent().toggleClass("active");
-    });
-
-    $(".sub-form__select-ul-2 li").click(function () {
-        let currentele = $(this).html();
-        $(".sub-form__default-option-2 li").html(currentele);
-        $(this).parents(".sub-form__select-2").removeClass("active");
-    });
 
 
     $('<div class="quantity-nav"><div class="quantity-button quantity-up"><img src="img/plus.svg" alt=""></div><div class="quantity-button quantity-down"><img src="img/minus.svg" alt=""></div></div>').insertAfter('.quantity input');
